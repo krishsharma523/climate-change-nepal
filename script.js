@@ -51,13 +51,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const message = document.getElementById('message').value.trim();
 
         if (name && email && message) {
-            const entry = document.createElement('p');
-            entry.innerHTML = `<strong>${name} (${email}):</strong> ${message}`;
-            guestbookEntries.appendChild(entry);
-            guestbookForm.reset();
-
-            // Show confirmation message
+            // Just show the confirmation message
             confirmationMessage.textContent = "✅ Thank you for contacting us. We will reach back to you soon.";
+            guestbookForm.reset();
         }
     });
 });
