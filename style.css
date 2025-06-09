@@ -197,57 +197,71 @@ header h1 {
 }
 
 #pledges {
-    background: #f9f9f9;
     padding: 2rem;
+    background: #f9f9f9;
     border-radius: 12px;
+    margin-bottom: 2rem;
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    margin-bottom: 1rem;
 }
 
 #pledges h2 {
     text-align: center;
     color: #4CAF50;
-    margin-bottom: 2rem;
     font-size: 2rem;
+    margin-bottom: 2rem;
     font-weight: bold;
 }
 
-.pledge-grid {
+.pledge-infographics {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 1.5rem;
+    justify-items: center;
 }
 
 .pledge-card {
     background: white;
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     text-align: center;
+    padding: 1rem;
+    position: relative;
+    overflow: hidden;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .pledge-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
 }
 
-.stars {
-    color: gold;
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-}
-
-.pledge-card p {
-    font-style: italic;
-    margin-bottom: 1rem;
-}
-
-.pledge-card h4 {
-    color: #4CAF50;
-    margin: 0;
+.pledge-number {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1.5rem;
     font-weight: bold;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    margin: 0 auto 1rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card1 .pledge-number { background-color: #FBB03B; } /* Orange */
+.card2 .pledge-number { background-color: #F15A29; } /* Red */
+.card3 .pledge-number { background-color: #EF5285; } /* Pink */
+.card4 .pledge-number { background-color: #9B59B6; } /* Purple */
+
+.pledge-content p {
+    font-style: italic;
+    margin-bottom: 0.75rem;
+}
+
+.pledge-content h4 {
+    color: #4CAF50;
+    font-weight: bold;
+    margin: 0;
 }
