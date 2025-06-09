@@ -42,11 +42,12 @@ document.addEventListener('DOMContentLoaded', function() {
     guestbookForm.addEventListener('submit', function(event) {
         event.preventDefault();
         const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
         const message = document.getElementById('message').value.trim();
 
-        if (name && message) {
+        if (name && email && message) {
             const entry = document.createElement('p');
-            entry.innerHTML = `<strong>${name}:</strong> ${message}`;
+            entry.innerHTML = `<strong>${name} (${email}):</strong> ${message}`;
             guestbookEntries.appendChild(entry);
 
             guestbookForm.reset();
