@@ -323,7 +323,8 @@ footer {
 
 .map-gallery img {
     width: 100%;
-    height: auto;
+    height: 200px; /* Consistent height for all maps */
+    object-fit: cover; /* Ensures images scale properly without stretching */
     border-radius: 8px;
     border: 1px solid #ccc;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
