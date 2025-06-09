@@ -60,9 +60,9 @@ footer {
     padding: 1rem;
 }
 
-/* Guestbook Section */
+/* Guestbook section */
 #guestbook {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 3rem auto;
     padding: 2rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -70,23 +70,23 @@ footer {
 
 .guestbook-container {
     display: flex;
-    flex-direction: row;
+    flex-wrap: nowrap;
     align-items: stretch;
     justify-content: space-between;
     gap: 2rem;
-    flex-wrap: wrap;
     background: white;
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.1);
     padding: 1rem;
+    box-sizing: border-box;
 }
 
 .form-container {
-    flex: 1 1 450px;
+    flex: 1 1 50%;
     background: linear-gradient(135deg, #4CAF50, #81C784);
     padding: 2rem;
     border-radius: 12px;
-    box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+    box-sizing: border-box;
     color: white;
     display: flex;
     flex-direction: column;
@@ -104,7 +104,6 @@ footer {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: bold;
-    color: white;
 }
 
 .form-container input[type="text"],
@@ -118,13 +117,6 @@ footer {
     font-size: 1rem;
     box-sizing: border-box;
     color: #333;
-}
-
-.form-container input[type="text"]:focus,
-.form-container input[type="email"]:focus,
-.form-container textarea:focus {
-    outline: none;
-    box-shadow: 0 0 5px rgba(255,255,255,0.5);
 }
 
 .form-container button {
@@ -155,23 +147,23 @@ footer {
 }
 
 .image-container {
-    flex: 1 1 400px;
+    flex: 1 1 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-sizing: border-box;
     padding: 1rem;
+    box-sizing: border-box;
 }
 
 .image-container img {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     object-fit: contain;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* Responsive adjustment */
+/* Responsive adjustments */
 @media (max-width: 900px) {
     .guestbook-container {
         flex-direction: column;
@@ -181,6 +173,5 @@ footer {
     .form-container,
     .image-container {
         width: 100%;
-        max-width: 500px;
     }
 }
