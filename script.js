@@ -48,6 +48,13 @@ document.addEventListener('DOMContentLoaded', function() {
             entry.innerHTML = `<strong>${name} (${email}):</strong> ${message}`;
             guestbookEntries.appendChild(entry);
             guestbookForm.reset();
+
+                        // Confirmation message
+            const confirmation = document.createElement('p');
+            confirmation.textContent = "✅ Thank you for contacting us. We will reach back to you soon.";
+            confirmation.style.color = "green";
+            confirmation.style.fontWeight = "bold";
+            guestbookEntries.appendChild(confirmation);
         }
     });
 });
