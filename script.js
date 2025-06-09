@@ -36,6 +36,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // Guestbook functionality
     const guestbookForm = document.getElementById('guestbook-form');
     const guestbookEntries = document.getElementById('guestbook-entries');
+    const confirmationMessage = document.createElement('p');
+    confirmationMessage.id = 'confirmation-message';
+    confirmationMessage.style.fontWeight = 'bold';
+    confirmationMessage.style.color = 'green';
+    confirmationMessage.style.textAlign = 'center';
+    confirmationMessage.style.marginTop = '1rem';
+    guestbookForm.parentNode.insertBefore(confirmationMessage, guestbookEntries);
 
     guestbookForm.addEventListener('submit', function(event) {
         event.preventDefault();
@@ -49,12 +56,8 @@ document.addEventListener('DOMContentLoaded', function() {
             guestbookEntries.appendChild(entry);
             guestbookForm.reset();
 
-                        // Confirmation message
-            const confirmation = document.createElement('p');
-            confirmation.textContent = "✅ Thank you for contacting us. We will reach back to you soon.";
-            confirmation.style.color = "green";
-            confirmation.style.fontWeight = "bold";
-            guestbookEntries.appendChild(confirmation);
+            // Show confirmation message
+            confirmationMessage.textContent = "✅ Thank you for contacting us. We will reach back to you soon.";
         }
     });
 });
