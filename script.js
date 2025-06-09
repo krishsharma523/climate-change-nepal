@@ -6,18 +6,16 @@ document.addEventListener('DOMContentLoaded', function() {
         correct: 1
     };
 
-    // Get DOM elements
+    // Quiz functionality
     const questionElement = document.getElementById('question');
     const answer1Button = document.getElementById('answer1');
     const answer2Button = document.getElementById('answer2');
     const resultElement = document.getElementById('result');
 
-    // Populate question and answers
     questionElement.textContent = quiz.question;
     answer1Button.textContent = quiz.answers[0];
     answer2Button.textContent = quiz.answers[1];
 
-    // Event Listeners
     answer1Button.addEventListener('click', function() {
         checkAnswer(0);
     });
@@ -49,7 +47,6 @@ document.addEventListener('DOMContentLoaded', function() {
             const entry = document.createElement('p');
             entry.innerHTML = `<strong>${name} (${email}):</strong> ${message}`;
             guestbookEntries.appendChild(entry);
-
             guestbookForm.reset();
         }
     });
