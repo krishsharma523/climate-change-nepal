@@ -138,6 +138,7 @@ footer {
     gap: 2rem;
     align-items: flex-start;
     justify-content: center;
+    flex-direction: row;
 }
 
 .form-container {
@@ -159,4 +160,16 @@ footer {
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+    .guestbook-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-container {
+        margin-top: 1rem;
+    }
 }
