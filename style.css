@@ -578,31 +578,30 @@ footer {
   cursor: pointer; /* Makes the pointer change on hover */
 }
 
-.footer-menu {
-    margin-bottom: 1rem;
+footer {
+    background-color: #f5f5f5;  /* Light background, similar to screenshots */
+    color: #333;
     text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;  /* Slightly smaller font */
+    line-height: 1.4;
 }
 
-.footer-menu nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: inline-flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    justify-content: center;
+footer p {
+    margin: 0 0 0.5rem 0;
 }
 
-.footer-menu nav ul li a {
-    color: white;
-    text-decoration: none;
+.footer-nav {
     font-weight: 600;
-    font-size: 1rem;
-    transition: color 0.3s, border-bottom 0.3s;
-    padding-bottom: 4px;
+    font-size: 0.9rem;  /* Smaller font size for links */
 }
 
-.footer-menu nav ul li a:hover {
-    color: #e0f2f1;
-    border-bottom: 2px solid #e0f2f1;
+.footer-nav a {
+    color: #4CAF50;
+    text-decoration: none;
+    margin: 0 0.25rem;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
 }
