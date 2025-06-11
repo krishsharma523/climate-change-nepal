@@ -57,3 +57,28 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+// Lightbox functionality for map gallery
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const closeLightbox = document.querySelector('.lightbox .close');
+const mapImages = document.querySelectorAll('.map-gallery img');
+
+mapImages.forEach(img => {
+  img.addEventListener('click', function() {
+    lightbox.style.display = 'block';
+    lightboxImg.src = this.src;
+    lightboxImg.alt = this.alt;
+  });
+});
+
+closeLightbox.addEventListener('click', function() {
+  lightbox.style.display = 'none';
+});
+
+// Close lightbox when clicking outside the image
+lightbox.addEventListener('click', function(event) {
+  if (event.target === lightbox) {
+    lightbox.style.display = 'none';
+  }
+});
