@@ -573,3 +573,7 @@ footer {
 .lightbox .close:hover {
   color: #bbb;
 }
+
+.map-gallery img {
+  cursor: pointer; /* Makes the pointer change on hover */
+}
