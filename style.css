@@ -605,3 +605,26 @@ footer p {
 .footer-nav a:hover {
     text-decoration: underline;
 }
+
+/* UN Extra Video */
+.un-extra-video {
+    background: white;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.un-extra-video img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.un-extra-video img:hover {
+    transform: scale(1.05);
+}
